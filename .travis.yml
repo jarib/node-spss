@@ -1,5 +1,7 @@
 sudo: false
 before_install:
-  yarn spssio:fetch
-  yarn spssio:fix
+  yarn spssio
 script: yarn install && yarn test
+language: node_js
+node_js:
+  - "9"

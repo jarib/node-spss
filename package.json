@@ -13,6 +13,7 @@
     "spssio:fetch": "curl -O https://dal05.objectstorage.softlayer.net/v1/AUTH_14da1a30-d001-4a2c-9060-cadaf68ff44d/yp-ngp-spss-dal05/SPSSTools/Statistics25/IO_Module_for_SPSS_Statistics_25.zip",
     "spssio:unpack": "mkdir spssio && cd spssio && unzip ../IO_Module_for_SPSS_Statistics_25.zip",
     "spssio:fix": "bash scripts/fix-libs.sh",
+    "spssio": "yarn spssio:fetch && yarn spssio:unpack && yarn spssio:fix",
     "test": "node test/"
   }
 }
