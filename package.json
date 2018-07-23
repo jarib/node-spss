@@ -1,0 +1,18 @@
+{
+  "name": "node-spss",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "jari.bakken@gmail.com",
+  "license": "MIT",
+  "gypfile": true,
+  "dependencies": {
+    "bindings": "^1.3.0",
+    "fs-extra": "^7.0.0"
+  },
+  "scripts": {
+    "spssio:fetch": "curl -O https://dal05.objectstorage.softlayer.net/v1/AUTH_14da1a30-d001-4a2c-9060-cadaf68ff44d/yp-ngp-spss-dal05/SPSSTools/Statistics25/IO_Module_for_SPSS_Statistics_25.zip",
+    "spssio:unpack": "mkdir spssio && cd spssio && unzip ../IO_Module_for_SPSS_Statistics_25.zip",
+    "spssio:fix": "bash scripts/fix-libs.sh",
+    "test": "node test/"
+  }
+}

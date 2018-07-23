@@ -1,0 +1,5 @@
+sudo: false
+before_install:
+  yarn spssio:fetch
+  yarn spssio:fix
+script: yarn install && yarn test
