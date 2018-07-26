@@ -18,5 +18,12 @@ if uname | grep Darwin >/dev/null; then
   install_name_tool -change "/libzlib1211spss.dylib" "@rpath/libzlib1211spss.dylib" libspssdio.dylib
 
   otool -L libspssdio.dylib
+elif uname | grep Linux >/dev/null; then
+  cd "$ROOT/spssio/lin64"
+
+  ln -s "$PWD/libspssdio.so.1" "$PWD/libspssdio.so"
+  ln -s "$PWD/libicudata.so.51.2" "$PWD/libicudata.so.51"
+  ln -s "$PWD/libicui18n.so.51.2" "$PWD/libicui18n.so.51"
+  ln -s "$PWD/libicuuc.so.51.2" "$PWD/libicuuc.so.51"
 fi
 

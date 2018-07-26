@@ -12,7 +12,7 @@
 
             'link_settings': {
                 'libraries': [
-                    '-lspssdio',
+                    '-lspssdio'
                 ]
             },
 
@@ -22,6 +22,14 @@
                         'libraries': [
                             '-L<(module_root_dir)/spssio/macos',
                             '-Wl,-rpath,<(module_root_dir)/spssio/macos',
+                        ]
+                    }
+                }],
+                ['OS=="linux"', {
+                    'link_settings': {
+                        'libraries': [
+                            '-L<(module_root_dir)/spssio/lin64',
+                            '-Wl,-rpath,<(module_root_dir)/spssio/lin64',
                         ]
                     }
                 }]
