@@ -5,3 +5,6 @@ script: yarn install && yarn test
 language: node_js
 node_js:
   - "9"
+os:
+  - linux
+  - osx
